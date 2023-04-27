@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Noita;
+  src: url("fonts/NoitaBlackletter.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Ganon;
+  src: url("fonts/retganon.ttf") format("opentype");
+}
+
 .App {
   text-align: center;
 }
@@ -5,4 +15,38 @@
 .game-element {
   height: 100%;
   width: 100%;
+}
+
+#title-menu {
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  width: 50%;
+  height: 33%;
+  background-color: rgba(49, 22, 117, 0.95);
+  font-family: "Noita";
+  font-size: 60pt;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#menu-item-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#menu-item {
+  flex: 1;
+  font-family: "Ganon";
+  font-size: 24pt;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-item:hover {
+  color: rgba(176, 145, 255, 0.95);
 }
