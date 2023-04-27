@@ -1,15 +1,12 @@
 import React from "react";
 import Game from "./components/Game";
-import TitleMenu from "./components/TitleMenu";
+import TitleUI from "./components/TitleUI";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <TitleMenu />
-      <Game></Game>
+      <Game />
     </div>
   );
 }
-
-export default App;

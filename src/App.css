@@ -1,11 +1,16 @@
 @font-face {
   font-family: Noita;
-  src: url("fonts/NoitaBlackletter.otf") format("opentype");
+  src: url("assets/fonts/NoitaBlackletter.otf") format("opentype");
 }
 
 @font-face {
   font-family: Ganon;
-  src: url("fonts/retganon.ttf") format("opentype");
+  src: url("assets/fonts/retganon.ttf") format("opentype");
+}
+
+body {
+  margin: 0;
+  background-color: black;
 }
 
 .App {
@@ -17,7 +22,7 @@
   width: 100%;
 }
 
-#title-menu {
+#title-ui {
   position: absolute;
   top: 33%;
   left: 25%;
