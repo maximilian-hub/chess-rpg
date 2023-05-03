@@ -20,20 +20,8 @@ const Game = () => {
     game.registry.set("setActiveUI", setActiveUI); // register the component-rendering function TODO: is that accurate?
     const scene = game.scene.keys["TitleScene"];
 
-    const onResize = () => {
-      // TODO: fix this (issue #1)
-      game.scale.resize(window.innerWidth, window.innerHeight);
-
-      if (scene.vaporboard) {
-        scene.centerImage();
-      }
-    };
-
-    window.addEventListener("resize", onResize); // TODO: fix this (issue #1)
-
     return () => {
       game.destroy(true);
-      window.removeEventListener("resize", onResize); // TODO: fix this (issue #1)
     };
   }, []);
 
