@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { useDispatch } from "react-redux";
+import { setScene } from "../store/slices/gameSlice";
 
 export default function TitleUI(props) {
+  const dispatch = useDispatch();
+
   function handlePlayButton() {
-    props.switchScene("BattleScene");
+    dispatch(setScene("BattleScene"));
   }
 
   return (
