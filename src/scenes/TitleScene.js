@@ -1,6 +1,6 @@
 import Phaser from "phaser";
 
-export default class TitleScene extends Phaser.Scene {
+class TitleScene extends Phaser.Scene {
   constructor() {
     super("TitleScene");
   }
@@ -10,7 +10,7 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
-    this.vaporboard = this.add.image(
+    this.bg = this.add.image(
       this.cameras.main.centerX,
       this.cameras.main.centerY,
       "background"
@@ -20,9 +20,8 @@ export default class TitleScene extends Phaser.Scene {
   update() {}
 
   centerImage() {
-    this.vaporboard.setPosition(
-      this.cameras.main.centerX,
-      this.cameras.main.centerY
-    );
+    this.bg.setPosition(this.cameras.main.centerX, this.cameras.main.centerY);
   }
 }
+
+export default TitleScene;

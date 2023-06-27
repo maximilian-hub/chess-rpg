@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import Phaser from "phaser";
 import TitleScene from "../scenes/TitleScene.js";
 import BattleScene from "../scenes/BattleScene.js";
+import BootstrapperScene from "../scenes/BootstrapperScene.js";
 import TitleUI from "./TitleUI.js";
 import BattleUI from "./BattleUI.js";
 import store from "../store/store.js";
@@ -21,16 +22,20 @@ const Game = () => {
       activeUI = <BattleUI />;
       break;
   }
-  console.log(activeUI);
 
   useEffect(() => {
     const config = {
       type: Phaser.AUTO,
       width: window.innerWidth,
       height: window.innerHeight,
-      scene: [TitleScene, BattleScene],
+      scene: [BootstrapperScene, TitleScene, BattleScene],
       parent: gameRef.current,
       reduxStore: store,
+      callbacks: {
+        postBoot: () => {
+          console.log("Boot complete.");
+        },
+      },
     };
 
     const game = new Phaser.Game(config); // create the game canvas

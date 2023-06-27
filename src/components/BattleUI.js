@@ -10,12 +10,9 @@ export default function BattleUI(props) {
   }
 
   return (
-    <div id="title-ui">
-      Battle Scene
-      <div id="menu-item-container">
-        <div id="menu-item" onClick={handleBackButton}>
-          Back to Title
-        </div>
+    <div id="battle-ui">
+      <div id="menu-item" onClick={handleBackButton}>
+        Back to Title
       </div>
     </div>
   );
